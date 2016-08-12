@@ -127,6 +127,9 @@ if [[ ! -f Procfile ]]; then
   puts-warn 'Learn more: https://devcenter.heroku.com/articles/procfile'
 fi
 
+# enable APT buildpack paths
+source .profile.d/apt_paths.sh
+
 # Experimental pre_compile hook.
 bpwatch start pre_compile
   source $BIN_DIR/steps/hooks/pre_compile
